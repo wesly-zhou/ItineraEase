@@ -1,0 +1,373 @@
+/* --------------- universal styling  -------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+/*     background-color: #dbdedd; */
+    background-color: #fff;
+}
+
+.container {
+    padding: 10px 12%;
+    align-items: center;
+    box-shadow: 0 0 1 rgba(0, 0, 0, .5);
+}
+
+/* --------------- navbar styling  -------------*/
+
+.navbar {
+    padding: 0 10%;
+    background-color: #fff;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 1 rgba(0, 0, 0, .5);
+    backdrop-filter: blur(25px);
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    gap: 10px;
+}
+
+.logo img {
+    margin-top: 15px;
+    width: 70px;
+}
+
+.logo__text {
+    padding-top: 15px;
+    text-decoration: none;
+    color: #0b1215;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.nav_menu a {
+    padding-top: 15px;
+    align-items: center;
+    color: #0b1215;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
+.nav_menu a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #ADEFD1;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    color: rgb(84, 108, 204);
+}
+
+.navbar a.logo {
+    margin-right: auto;
+    border: 0px;
+    padding: 0;
+}
+
+.nav_menu a.active {
+    color: #0b1215;
+    text-decoration-line: underline;
+    text-decoration-color: #ADEFD1;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 2px;
+}
+
+.dropdown {
+    margin-top: 15px;
+}
+
+.hamburger_menu {
+    display: none;
+    cursor: pointer;
+    padding-top: 25px;
+}
+
+.hamburger_menu span {
+    display: block;
+    background-color: #0b1215;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --------------- navbar mobile menu styling  -------------*/
+
+@media screen and (max-width: 980px) { 
+    .hamburger_menu {
+        display: block;
+    }
+    .hamburger_menu.change span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg)
+    }
+    
+    .hamburger_menu.change span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger_menu.change span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg)
+    }
+
+    .nav_menu {
+        position: absolute;
+        left: -100%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        backdrop-filter: blur(25px);
+        box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    }
+    .nav_menu a {
+        margin: 16px 0;
+    }
+    .nav_menu.change {
+        left: 0;
+    }
+    .nav_menu a.active {
+        text-decoration: none;
+    }
+}
+
+.page-header {
+    background-image: linear-gradient(rgba(93, 93, 93, 0.7), rgba(93, 93, 93, 0.7)), url('../images/sky.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    max-height: 300px;
+    padding-top: 140px;
+}
+
+.page-header-title {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1.5;
+    margin-bottom: 10px;
+}
+
+.page-header-subtitle {
+    font-size: 20px;
+    letter-spacing: 1;
+    text-align: center;
+    padding: 0px 30px 50px;
+}
+
+/* --------------- account login/sign up styling  -------------*/
+
+.form-class {
+    margin-bottom: 30px;
+}
+
+.form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.returnHome {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a6a6a6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* --------------- Footer styling  -------------*/
+
+.footer__container {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    align-items: center;
+    color: #0c0c0c;
+    box-shadow: 0 0 1 rgba(0, 0, 0, .5);
+}
+
+.footer__links {
+    width: 100%;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* makes it start from the left side */
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .75rem;
+}
+
+.footer__link--items p {
+    margin-bottom: 12px;
+    font-size: .8rem;
+}
+
+.footer__link > h2 {
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: rgb(76, 145, 218);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.footer__link--items a:hover {
+    text-decoration: underline;
+    transition: 0.3s ease-out;
+}
+
+.social__media {
+    width: 100%;
+    justify-content: center;
+}
+
+.social__media--wrap {
+    display: flex;
+}
+
+.website__rights {
+    color: #0c0c0c;
+    font-size: .75rem;
+    display: flex;
+    align-items: flex-start; /* makes it start from the left side */
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#footer__id {
+    font-weight: 500;
+    color: #0c0c0c;
+    font-size: 1.25rem;
+}
+
+/* --------------- Footer responsive styling  -------------*/
+
+@media screen and (max-width: 960px) {
+    .nav_menu a {
+        font-size: 18px;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__rights {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__link--items {
+        font-size: .75rem;
+    }
+
+    .footer__container {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer__container {
+        padding: 5px 5%;
+    }
+    
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .social__media--wrap {
+        flex-direction: column;
+    }
+
+    .footer__link--items {
+        text-align: left;
+        align-items: first baseline baseline;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .website__rights {
+        text-align: left;
+        align-items: first baseline;
+    }
+}

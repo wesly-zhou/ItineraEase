@@ -1,0 +1,81 @@
+.nav_menu.change {
+    left: 0;
+}
+.hamburger_menu.change span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger_menu.change span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger_menu.change span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+#mapContainer, #map {
+    height: 80vh;
+    margin: 0 auto; 
+}
+#controlPanel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#controlPanel input[type="text"] {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 10px;
+}
+#dynamicWaypointsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#dynamicWaypointsContainer input[type="text"] {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 10px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#waypointsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#routeButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 0.8rem;
+    margin: 0 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button, .btn1 {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0.8rem;
+    margin: 0 5px;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.btn1 {
+    margin-top: 15px;
+}
+
+button:hover, .btn1 {
+    background-color: #45a049;
+}
+
+.footer__container {
+    padding-top: 100px !important;
+}
