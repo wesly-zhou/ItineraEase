@@ -1,0 +1,215 @@
+/* --------------- Main Content (#Form) styling  -------------*/
+
+#form select {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #ADEFD1; 
+    border: 1px solid #0b2888;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+
+figcaption {
+    margin: 15px 0;
+}
+
+.img--caption {
+    font-size: 1rem;
+    padding: 10px 3px;
+}
+
+#form {
+    width: 100%;
+    overflow: auto;
+    margin-top: 8vh;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    backdrop-filter: blur(25px);
+}
+#form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+#form h2 {
+    font-size:50px;
+}
+#form .contact {
+    padding-left: 10%;
+    width: 45%;
+    float: left;
+    text-align: left;
+}
+#form .container {
+    padding-right: 10%;
+    width: 50%;
+    float: right;
+}
+
+#form input {
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: #ADEFD1;
+    border: 1px solid #0b2888;
+    border-radius: 10px;
+    height: 30px;
+    padding:5px;
+}
+#form textarea {
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: #ADEFD1;
+    border: 1px solid #0b2888;
+    border-radius: 10px;
+    padding: 5px;
+}
+#form input[type="submit"] {
+    display: block;
+    width: 60%;
+    border-width: 2px;
+    border-color: #0b2888;
+    margin: auto;
+    border-radius: 10px;
+}
+#form img {
+    height: 360px;
+    border-radius: 25px;
+    margin: 15px 0;
+}
+
+.img--caption {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact h3 {
+    font-size: 1.5rem; 
+    font-weight: 500;
+}
+
+.contact p {
+    font-weight: 500; 
+    font-size: 1rem;
+}
+
+/* --------------- Main Content Responsive styling  -------------*/
+
+@media screen and (max-width: 1600px) {
+    #form img {
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #form img {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #form img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #form img {
+        height: 200px;
+    }
+
+    .contact h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #form img {
+        width: 100%;
+    }
+    .contact h3 {
+        font-size: 1.6rem;
+    }
+
+    #form .container {
+        margin-top: -50px;
+        margin: 0;
+        float:left;
+        width: 90%;
+    }
+    #form .contact {
+        width: 90%;
+        float: left;
+        text-align: center;
+        margin-top: 0;
+    }
+    #form h2 {
+        font-size:30px;
+    }
+
+    #form img {
+        width: 100%;
+    }
+
+    .img--caption {
+        font-size: 1rem;
+        margin-bottom: 5vh;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}   
+
+@media screen and (max-width: 760px) {
+    #form input[type="submit"] {
+        width: 100%;
+    }
+
+    .contact h3 {
+        font-size: 1.8rem;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    #form img {
+        height: 150px;
+    }
+
+   .container{
+    margin-top: 5%;
+   }
+
+   .contact h3 {
+        font-size: 1.6rem;
+   }
+
+   .contact p {
+        font-size: 1rem;
+   }
+}
